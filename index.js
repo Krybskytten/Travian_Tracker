@@ -9,7 +9,6 @@ const puppeteer = require('puppeteer');
 const fs = require('fs-extra');
 
 
-
 /* AUTHORIZATION */
 async function main() {
   const browser = await puppeteer.launch({headless: false});
@@ -33,7 +32,7 @@ const page2 = await browser.newPage();
     return tds.map(td => td.innerText)
   });
 
-  fs.writeFile('./tracker.json', JSON.stringify
+  fs.writeFile('./data/general.json', JSON.stringify
   ({ 
       Tribe:`${profileData[0]}`,
       Alliance: `${profileData[1]}`,
@@ -43,51 +42,60 @@ const page2 = await browser.newPage();
       Defender_rank: `${profileData[5]}`,
       Hero_level: `${profileData[6]}`
     }, null, 7)); 
-
-
-/* TROOPS IN SELECTED VILLAGE */
-const page3 = await browser.newPage();
-  await page3.goto(`${config.domain}/build.php?gid=16&tt=1&filter=3`)
+  
+/* TROOPS IN ALL VILLAGES */
+if (`${config["plus_account?"]}` == `yes`) {
+ const page3 = await browser.newPage();
+  await page3.goto(`${config.domain}village/statistics/troops`)
   await page3.setViewport({width: 1920, height: 1080});
-  const troopData = await page3.evaluate(() => {
-  const tds = Array.from(document.getElementsByClassName("units last"))
-return tds.map(td => td.textContent)
-    });
-console.log(troopData[0])
-    if (`${profileData[0]}`== `Gauls`) {
-        fs.writeFile('./troops.json', JSON.stringify
-        ({ 
-        TroopData: `${troopData[0]}`
-            /*    
-        Phalanx:`${troopData[0]}`,
-            Swordsman: `${troopData[1]}`,
-            Pathfinder: `${troopData[2]}`, 
-            Theutates_thunder: `${troopData[3]}`,
-            Druidrider: `${troopData[4]}`,
-            Haeduan: `${troopData[5]}`,
-            Ram: `${troopData[6]}`,
-            Trebuchet: `${troopData[7]}`,
-            Chieftain: `${troopData[8]}`,
-            Settler: `${troopData[9]}`,
-            Hero: `${troopData[10]}`, */
-          }, null, 11)); 
-    } else if (`${profileData[0]}`== `Romans`) {
-console.log("fix and then add later.")
-    } else { (`${profileData[0]}`== `Teutons`) 
-    console.log("fix and then add later.")
-
-    };
+  const plusTroopData = await page3.evaluate(() => {
+    const tds = Array.from(document.querySelectorAll('table tr td'))
+    return tds.map(td => td.innerText)
     
+  }); 
 
+fs.writeFile('./data/troops.json', JSON.stringify
+({ 
+      Infantry_1: `${plusTroopData[25]}`,
+      Infantry_2: `${plusTroopData[26]}`,
+      Infantry_3: `${plusTroopData[27]}`, 
+      Horse_1: `${plusTroopData[28]}`,
+      Horse_2: `${plusTroopData[29]}`,
+      Horse_3: `${plusTroopData[30]}`,
+      Ram: `${plusTroopData[31]}`,
+      Catapult: `${plusTroopData[32]}`,
+      Chief: `${plusTroopData[33]}`,
+      Settler: `${plusTroopData[34]}`,
+      Hero: `${plusTroopData[35]}`,
+  }, null, 11)); 
 
+} else {
+  /* TROOPS IN SELECTED VILLAGE */
+  const page4 = await browser.newPage();
+  await page4.goto(`${config.domain}/build.php?gid=16&tt=1&filter=3`)
+  await page4.setViewport({width: 1920, height: 1080});
+  const troopData = await page4.evaluate(() => {
+    const tds = Array.from(document.querySelectorAll('table tr td'))
+    return tds.map(td => td.innerText)
+  });
+  
+  fs.writeFile('./data/troops.json', JSON.stringify
+({ 
+      Infantry_1: `${troopData[13]}`,
+      Infantry_2: `${troopData[14]}`,
+      Infantry_3: `${troopData[15]}`, 
+      Horse_1: `${troopData[16]}`,
+      Horse_2: `${troopData[17]}`,
+      Horse_3: `${troopData[18]}`,
+      Ram: `${troopData[19]}`,
+      Catapult: `${troopData[20]}`,
+      Chief: `${troopData[21]}`,
+      Settler: `${troopData[22]}`,
+      Hero: `${troopData[23]}`,
+  }, null, 11)); 
+};
   /* PROCESS DONE */
   await browser.close();
 
 } 
-
-
-
 main();
-
-
-
