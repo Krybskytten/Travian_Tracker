@@ -30,5 +30,5 @@ AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR ANY SANCTIONS MADE TO YOUR TRAVI
 If you feel like the bot is missing a feature then you are encouraged to create a [pull request](https://github.com/Krybskytten/Travian_tracker/pulls).
 
 ### [Issues](https://github.com/Krybskytten/Travian_tracker/issues)
-If you have any issues with the script then feel free to submit an issue [here](https://github.com/Krybskytten/Travian_tracker/issues)
+If you have any issues with the script then feel free to submit an issue [here](https://github.com/Krybskytten/Travian_tracker/issues).
 
