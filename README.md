@@ -5,7 +5,7 @@ Travian Tracker is a free and open source Travian script written in Node.js. It 
 ## ⚠️ Disclaimer⚠️ 
 This software is for educational purposes only. Do not risk accounts 
 which you are afraid to lose. USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS 
-AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR SANCTIONS MADE TO YOUR TRAVIAN ACCOUNT.  
+AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR ANY SANCTIONS MADE TO YOUR TRAVIAN ACCOUNT.  
 
 ## Installation
 
