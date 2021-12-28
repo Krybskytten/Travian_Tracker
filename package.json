@@ -1,6 +1,6 @@
 {
   "name": "travian_tracker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tracker for travian",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "keywords": [
     "Travian",
     "Tracker",
-    "Trial"
+    "Automation"
   ],
   "author": "https://github.com/Krybskytten",
   "license": "ISC",
