@@ -13,6 +13,7 @@ AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR SANCTIONS MADE TO YOUR TRAV
 - Install [Node.js](https://nodejs.org/en/).
 - Run file ["install.bat"](https://github.com/Krybskytten/Travian_tracker/blob/main/install.bat) on your computer.
 - Update file ["config.json"](https://github.com/Krybskytten/Travian_tracker/blob/main/config.json) with your information.
+- Start script using ["start.bat"](https://github.com/Krybskytten/Travian_tracker/blob/main/start.bat).
 
 ### Config Example
 - "travian_username": "Krybskytten",
