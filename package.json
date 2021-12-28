@@ -1,0 +1,27 @@
+{
+  "name": "travian_tracker",
+  "version": "1.0.0",
+  "description": "Tracker for travian",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krybskytten/Travian_tracker.git"
+  },
+  "keywords": [
+    "Travian",
+    "Tracker",
+    "Trial"
+  ],
+  "author": "https://github.com/Krybskytten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krybskytten/Travian_tracker/issues"
+  },
+  "homepage": "https://github.com/Krybskytten/Travian_tracker#readme",
+  "dependencies": {
+    "puppeteer": "^13.0.1"
+  }
+}
