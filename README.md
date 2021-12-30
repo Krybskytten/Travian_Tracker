@@ -18,7 +18,7 @@ AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR ANY SANCTIONS MADE TO YOUR TRAVI
 ### Config Example
 - "travian_username": "Krybskytten",
 - "travian_password": "examplepassword123",
-- "domain": "https://ts30.x3.arabics.travian.com/"
+- "domain": "https://ts30.x3.arabics.travian.com/",
 - "plus_account?": "yes" or "no".
 
 
