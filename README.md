@@ -32,3 +32,10 @@ If you feel like the bot is missing a feature then you are encouraged to create 
 ### [Issues](https://github.com/Krybskytten/Travian_tracker/issues)
 If you have any issues with the script then feel free to submit an issue [here](https://github.com/Krybskytten/Travian_tracker/issues).
 
+
+## Contributors
+
+<a href="https://github.com/Krybskytten/Travian_Tracker/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=krybskytten/Travian_Tracker" />
+</a>
+
